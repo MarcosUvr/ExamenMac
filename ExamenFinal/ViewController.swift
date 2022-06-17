@@ -48,15 +48,18 @@ class ViewController: NSViewController {
                 // El ingreso ha sido correcto
                 if user.Rol == "Admin" {
                     // Nos manda al menú de admin
-                    AlertBox.messageText = "Entramos al menú de admin"
+                    //AlertBox.messageText = "Entramos al menú de admin"
+                    performSegue(withIdentifier: "menuAdminSegue", sender: self)
                 } else if user.Rol == "Almacenista" {
                     // Nos manda al menú de almacenista
                     AlertBox.messageText = "Entramos al menú de Almacenista"
+                    performSegue(withIdentifier: "menuAlmacenistaSegue", sender: self)
                 } else if user.Rol == "Vendedor" {
                     // Nos manda al menú de vendedor
                     AlertBox.messageText = "Entramos al menú de Vendedor"
+                    performSegue(withIdentifier: "menuVentasSegue", sender: self)
                 }
-                AlertBox.runModal()
+                //AlertBox.runModal()
                 userFound = true
             }
         }
@@ -67,6 +70,16 @@ class ViewController: NSViewController {
         }
         // Reiniciamos la variable de usuario encontrado a su valor original
         userFound = false
+    }
+    
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if segue.identifier == "menuAdminSegue" {
+            (segue.destinationController as! MenuAdmin).login = self
+        } else if segue.identifier == "menuAlmacenistaSegue" {
+            (segue.destinationController as! MenuAlmacenistas).login = self
+        } else if segue.identifier == "menuVentasSegue" {
+            (segue.destinationController as! MenuVentas).login = self
+        }
     }
     
 }

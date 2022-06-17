@@ -11,6 +11,10 @@ class NuevoProducto: NSViewController {
 
     // Declaramos nuestras variables de la interfaz(t = textBox, cb = ComboBox, btn = Botón)
     
+    
+    // Variables locales
+    @objc dynamic var login:ViewController!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.

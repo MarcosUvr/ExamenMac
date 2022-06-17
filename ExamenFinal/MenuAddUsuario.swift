@@ -9,6 +9,10 @@ import Cocoa
 
 class MenuAddUsuario: NSViewController {
 
+    
+    //Variables locales
+    @objc dynamic var vc:ViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.

@@ -13,6 +13,10 @@ class MenuVentas: NSViewController {
     @IBOutlet weak var btnNuevaVenta: NSButton!
     @IBOutlet weak var btnConsulta: NSButton!
     @IBOutlet weak var btnIndicadores: NSButton!
+    
+    // Variables locales
+    @objc dynamic var login:ViewController!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.

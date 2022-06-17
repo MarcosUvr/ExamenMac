@@ -22,6 +22,10 @@ class NuevoUsuario: NSViewController {
     @IBOutlet weak var btnModificar: NSButton!
     @IBOutlet weak var btnAgregar: NSButton!
     
+    // Variables locales
+    @objc dynamic var login:ViewController!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.

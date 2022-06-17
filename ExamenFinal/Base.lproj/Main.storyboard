@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -704,7 +704,7 @@
         <!--Menu Almacenistas-->
         <scene sceneID="xSr-Ku-aeF">
             <objects>
-                <viewController id="8Yy-OR-Z1D" customClass="MenuAlmacenistas" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Menu Almacenistas" id="8Yy-OR-Z1D" customClass="MenuAlmacenistas" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="w4F-uw-SHr">
                         <rect key="frame" x="0.0" y="0.0" width="312" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -768,10 +768,10 @@
             </objects>
             <point key="canvasLocation" x="-214" y="1114"/>
         </scene>
-        <!--View Controller-->
+        <!--Login-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="XfG-lQ-9wD" customClass="ViewController" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="351" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -847,10 +847,10 @@
             </objects>
             <point key="canvasLocation" x="-72.5" y="655"/>
         </scene>
-        <!--Menu Admin-->
+        <!--Menú Admin-->
         <scene sceneID="SCs-n3-KK5">
             <objects>
-                <viewController id="ag7-A6-hun" customClass="MenuAdmin" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Menú Admin" id="ag7-A6-hun" customClass="MenuAdmin" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="E4G-l2-CRp">
                         <rect key="frame" x="0.0" y="0.0" width="268" height="223"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -862,6 +862,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Navegacion:" target="ag7-A6-hun" id="YHl-h7-oGe"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B6k-mv-unJ">
                                 <rect key="frame" x="81" y="53" width="106" height="32"/>
@@ -870,6 +873,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Navegacion:" target="ag7-A6-hun" id="O63-so-IJQ"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QKm-GK-pgy">
                                 <rect key="frame" x="95" y="187" width="80" height="16"/>
@@ -887,6 +893,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Navegacion:" target="ag7-A6-hun" id="fIa-7P-vVf"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HRv-Kf-hRS">
                                 <rect key="frame" x="96" y="117" width="76" height="32"/>
@@ -895,6 +904,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Navegacion:" target="ag7-A6-hun" id="rJM-WD-yBm"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
@@ -912,10 +924,10 @@
             </objects>
             <point key="canvasLocation" x="260" y="1022"/>
         </scene>
-        <!--Menu Add Usuario-->
+        <!--Menú Añadir Usuario-->
         <scene sceneID="wLh-D8-Jf4">
             <objects>
-                <viewController id="qMZ-BJ-urE" customClass="MenuAddUsuario" sceneMemberID="viewController">
+                <viewController title="Menú Añadir Usuario" id="qMZ-BJ-urE" customClass="MenuAddUsuario" sceneMemberID="viewController">
                     <view key="view" id="OXT-47-sp5">
                         <rect key="frame" x="0.0" y="0.0" width="310" height="171"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -958,7 +970,7 @@
         <!--Nuevo Usuario-->
         <scene sceneID="JaB-pi-RpP">
             <objects>
-                <viewController id="seM-KT-SKz" customClass="NuevoUsuario" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Nuevo Usuario" id="seM-KT-SKz" customClass="NuevoUsuario" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="XgR-y1-Qbw">
                         <rect key="frame" x="0.0" y="0.0" width="352" height="356"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1168,7 +1180,7 @@
         <!--Nueva Venta-->
         <scene sceneID="ttk-aN-DBw">
             <objects>
-                <viewController id="D8k-K4-W90" customClass="NuevaVenta" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Nueva Venta" id="D8k-K4-W90" customClass="NuevaVenta" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="LZN-E3-Msg">
                         <rect key="frame" x="0.0" y="0.0" width="352" height="329"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1339,10 +1351,10 @@
             </objects>
             <point key="canvasLocation" x="1064" y="571"/>
         </scene>
-        <!--Menu Ventas-->
+        <!--Menú Vendedor-->
         <scene sceneID="jK0-ad-5De">
             <objects>
-                <viewController id="R3O-nk-I4e" customClass="MenuVentas" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Menú Vendedor" id="R3O-nk-I4e" customClass="MenuVentas" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="yJz-pQ-g5Z">
                         <rect key="frame" x="0.0" y="0.0" width="264" height="209"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1391,12 +1403,12 @@
                 </viewController>
                 <customObject id="Qtf-Ho-qaL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="513" y="656"/>
+            <point key="canvasLocation" x="513" y="655.5"/>
         </scene>
         <!--Nuevo Producto-->
         <scene sceneID="kB9-zz-bev">
             <objects>
-                <viewController id="lbl-B5-DCP" customClass="NuevoProducto" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Nuevo Producto" id="lbl-B5-DCP" customClass="NuevoProducto" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="gXP-tP-zZg">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="428"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1569,7 +1581,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wNq-Lq-NdE"/>
-        <segue reference="UhJ-x1-isg"/>
+        <segue reference="6b3-Tj-78d"/>
+        <segue reference="Svn-oN-68m"/>
     </inferredMetricsTieBreakers>
 </document>
