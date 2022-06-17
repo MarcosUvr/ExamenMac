@@ -16,6 +16,7 @@ class PersonModel: NSObject {
     @objc dynamic var Correo: String
     @objc dynamic var Password: String
     @objc dynamic var Rol: String
+    // Este es un comentario
     
     init (_ ID: String, _ Nombre: String, _ ApellidoP: String, _ ApellidoM: String, _ Sexo: String, _ Correo: String, _ Password: String, _ Rol: String) {
         self.ID = ID
