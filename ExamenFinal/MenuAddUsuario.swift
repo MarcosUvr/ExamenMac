@@ -11,7 +11,8 @@ class MenuAddUsuario: NSViewController {
 
     
     //Variables locales
-    @objc dynamic var vc:ViewController!
+    @objc dynamic var login:ViewController!
+    var a = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()

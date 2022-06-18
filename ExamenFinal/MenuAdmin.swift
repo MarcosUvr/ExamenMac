@@ -39,11 +39,11 @@ class MenuAdmin: NSViewController {
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         if segue.identifier == "menuUsuarioSegue" {
-            (segue.destinationController as! MenuAddUsuario).vc = login
+            (segue.destinationController as! MenuAddUsuario).login = self.login
         } else if segue.identifier == "menuVentasSegue" {
-            (segue.destinationController as! NuevoProducto).login = login
+            (segue.destinationController as! MenuVentas).login = login
         } else if segue.identifier == "menuAlmacenistaSegue" {
-            (segue.destinationController as! NuevaVenta).login = login
+            (segue.destinationController as! MenuAlmacenistas).login = login
         }
     }
     
