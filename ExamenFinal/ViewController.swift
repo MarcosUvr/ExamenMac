@@ -18,7 +18,7 @@ class ViewController: NSViewController {
     var email: String = ""
     var userFound: Bool = false
     var password: String = ""
-    var Usuarios: [PersonModel] = [PersonModel("A001MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "hotmail.com", "swagmen123", "Admin"), PersonModel("A001MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "ahotmail.com", "swagmen123", "Almacenista"), PersonModel("A001MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "bhotmail.com", "swagmen1234", "Vendedor")]
+    var Usuarios: [PersonModel] = [PersonModel("A001MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "hotmail.com", "swagmen123", "Admin"), PersonModel("A002MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "ahotmail.com", "swagmen123", "Almacenista"), PersonModel("A003MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "bhotmail.com", "swagmen1234", "Vendedor")]
     var Ventas: [VentaModel] = []
     var Productos: [ProductModel] = []
     var AlertBox = NSAlert()
@@ -44,8 +44,10 @@ class ViewController: NSViewController {
         
         // Validamos que las credenciales introducidas coincidan con las credenciales guardadas
         for user in Usuarios {
-            if email == user.Correo && password == user.Password {
+            if email == user.Correo && password == user.Password || email == user.ID && password == user.Password {
                 // El ingreso ha sido correcto
+                AlertBox.messageText = "Bienvenido \(user.Nombre)\nRol: \(user.Rol)"
+                AlertBox.runModal()
                 if user.Rol == "Admin" {
                     // Nos manda al menú de admin
                     //AlertBox.messageText = "Entramos al menú de admin"
@@ -59,7 +61,7 @@ class ViewController: NSViewController {
                     AlertBox.messageText = "Entramos al menú de Vendedor"
                     performSegue(withIdentifier: "menuVentasSegue", sender: self)
                 }
-                //AlertBox.runModal()
+                
                 userFound = true
             }
         }

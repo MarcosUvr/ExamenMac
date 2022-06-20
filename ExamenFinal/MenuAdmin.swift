@@ -33,18 +33,19 @@ class MenuAdmin: NSViewController {
         } else if sender.title == "Almacen" {
             performSegue(withIdentifier: "menuAlmacenistaSegue", sender: login)
         } else if sender.title == "Indicadores" {
-            print("Indicadores")
+            performSegue(withIdentifier: "indicadoresAdminSegue", sender: login)
         }
     }
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         if segue.identifier == "menuUsuarioSegue" {
-            (segue.destinationController as! MenuAddUsuario).login = self.login
+            (segue.destinationController as! MenuAddUsuario).login = login
         } else if segue.identifier == "menuVentasSegue" {
             (segue.destinationController as! MenuVentas).login = login
         } else if segue.identifier == "menuAlmacenistaSegue" {
             (segue.destinationController as! MenuAlmacenistas).login = login
-        }
-    }
+        } else if segue.identifier == "indicadoresAdminSegue" {
+            (segue.destinationController as! IndicadoresAdmin).login = login
+        }    }
     
 }

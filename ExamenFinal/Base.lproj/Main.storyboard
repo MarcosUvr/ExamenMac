@@ -716,6 +716,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Navegacion:" target="8Yy-OR-Z1D" id="AdU-lI-pbG"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uLY-XM-eCt">
                                 <rect key="frame" x="120" y="177" width="98" height="32"/>
@@ -724,6 +727,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Navegacion:" target="8Yy-OR-Z1D" id="YWd-GI-Jqf"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vp4-EA-4fY">
                                 <rect key="frame" x="104" y="145" width="130" height="32"/>
@@ -732,6 +738,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Navegacion:" target="8Yy-OR-Z1D" id="NnL-1v-Y8e"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dma-fX-YkD">
                                 <rect key="frame" x="109" y="113" width="120" height="32"/>
@@ -740,6 +749,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Navegacion:" target="8Yy-OR-Z1D" id="Ecr-rK-xDw"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8HW-bY-gZ5">
                                 <rect key="frame" x="116" y="72" width="106" height="32"/>
@@ -748,6 +760,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Navegacion:" target="8Yy-OR-Z1D" id="B0u-0G-8b0"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FBx-1V-2yo">
                                 <rect key="frame" x="111" y="244" width="116" height="16"/>
@@ -768,6 +783,30 @@
             </objects>
             <point key="canvasLocation" x="-214" y="1114"/>
         </scene>
+        <!--Indicadores Admin-->
+        <scene sceneID="OSS-XQ-uui">
+            <objects>
+                <viewController title="Indicadores Admin" id="RvT-hF-wwB" customClass="IndicadoresAdmin" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="T9b-yA-7hu">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zSZ-cU-Ozd">
+                                <rect key="frame" x="167" y="264" width="117" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Indicadores Admin" id="zbE-hn-OEv">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="Pue-AX-Cnx" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="366" y="1431"/>
+        </scene>
         <!--Login-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
@@ -777,16 +816,16 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sc8-1S-IVd">
-                                <rect key="frame" x="18" y="164" width="37" height="16"/>
+                                <rect key="frame" x="18" y="164" width="64" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Email" id="zEc-NF-JAV">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Email o ID" id="zEc-NF-JAV">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JaO-Ct-zZT">
-                                <rect key="frame" x="61" y="161" width="270" height="21"/>
+                                <rect key="frame" x="87" y="161" width="244" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="1p9-Ts-MiD">
                                     <font key="font" metaFont="system"/>
@@ -918,6 +957,7 @@
                         <segue destination="qMZ-BJ-urE" kind="modal" identifier="menuUsuarioSegue" id="yWk-2h-Cag"/>
                         <segue destination="8Yy-OR-Z1D" kind="modal" identifier="menuAlmacenistaSegue" id="Svn-oN-68m"/>
                         <segue destination="R3O-nk-I4e" kind="modal" identifier="menuVentasSegue" id="6b3-Tj-78d"/>
+                        <segue destination="RvT-hF-wwB" kind="modal" identifier="indicadoresAdminSegue" id="rC3-dj-ssb"/>
                     </connections>
                 </viewController>
                 <customObject id="S9a-cd-Ljh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -927,18 +967,21 @@
         <!--Menú Añadir Usuario-->
         <scene sceneID="wLh-D8-Jf4">
             <objects>
-                <viewController title="Menú Añadir Usuario" id="qMZ-BJ-urE" customClass="MenuAddUsuario" sceneMemberID="viewController">
+                <viewController title="Menú Añadir Usuario" id="qMZ-BJ-urE" customClass="MenuAddUsuario" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="OXT-47-sp5">
                         <rect key="frame" x="0.0" y="0.0" width="310" height="171"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lgj-mO-NBT">
-                                <rect key="frame" x="70" y="77" width="194" height="32"/>
+                                <rect key="frame" x="105" y="77" width="124" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Dar de Alta Nuevo Usuario" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cd8-cx-c2c">
+                                <buttonCell key="cell" type="push" title="Nuevo Usuario" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cd8-cx-c2c">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Navegacion:" target="qMZ-BJ-urE" id="s2e-0i-e1l"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jFS-f1-XUn">
                                 <rect key="frame" x="85" y="45" width="164" height="32"/>
@@ -947,6 +990,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Navegacion:" target="qMZ-BJ-urE" id="r8z-EH-v9b"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1u9-u7-oul">
                                 <rect key="frame" x="101" y="135" width="129" height="16"/>
@@ -960,7 +1006,10 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="btnConsultaUsuario" destination="jFS-f1-XUn" id="Pj3-ny-eQM"/>
+                        <outlet property="btnNuevoUsuario" destination="lgj-mO-NBT" id="C2s-eb-cvU"/>
                         <segue destination="seM-KT-SKz" kind="modal" identifier="nuevoUsuarioSegue" id="2YH-vd-jza"/>
+                        <segue destination="alN-OL-DMP" kind="modal" identifier="consultaUsuarioSegue" id="DHm-J3-dN4"/>
                     </connections>
                 </viewController>
                 <customObject id="Cun-oJ-Ldu" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -976,16 +1025,16 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4K-4R-gg9">
-                                <rect key="frame" x="18" y="299" width="60" height="16"/>
+                                <rect key="frame" x="18" y="299" width="73" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Nombres" id="9gf-cR-Mz3">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Nombre (s)" id="9gf-cR-Mz3">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gIk-o2-DWg">
-                                <rect key="frame" x="86" y="296" width="229" height="21"/>
+                                <rect key="frame" x="97" y="296" width="218" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="8TN-mG-pCc">
                                     <font key="font" metaFont="system"/>
@@ -1127,9 +1176,9 @@
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <objectValues>
-                                        <string>Item 1</string>
-                                        <string>Item 2</string>
-                                        <string>Item 3</string>
+                                        <string>Admin</string>
+                                        <string>Vendedor</string>
+                                        <string>Almacenista</string>
                                     </objectValues>
                                 </comboBoxCell>
                             </comboBox>
@@ -1156,6 +1205,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="AgregarUsuario:" target="seM-KT-SKz" id="Rob-dB-hUE"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
@@ -1176,6 +1228,30 @@
                 <customObject id="rLg-mW-9rp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1124" y="1028"/>
+        </scene>
+        <!--Consulta Usuarios-->
+        <scene sceneID="Yyx-t6-Zav">
+            <objects>
+                <viewController title="Consulta Usuarios" id="alN-OL-DMP" customClass="ConsultaUsuario" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="yMM-PP-gOY">
+                        <rect key="frame" x="0.0" y="0.0" width="352" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="67c-3X-65J">
+                                <rect key="frame" x="119" y="264" width="115" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Consulta Usuarios" id="pty-Ya-EF3">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="TXZ-FP-w4L" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895" y="1482"/>
         </scene>
         <!--Nueva Venta-->
         <scene sceneID="ttk-aN-DBw">
@@ -1366,6 +1442,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Navegacion:" target="R3O-nk-I4e" id="rRu-kk-INH"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gue-l3-f5h">
                                 <rect key="frame" x="88" y="93" width="88" height="32"/>
@@ -1374,6 +1453,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Navegacion:" target="R3O-nk-I4e" id="gTR-UL-5wV"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u34-Ji-JPG">
                                 <rect key="frame" x="93" y="163" width="100" height="16"/>
@@ -1391,6 +1473,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Navegacion:" target="R3O-nk-I4e" id="20t-0l-8jT"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
@@ -1581,7 +1666,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6b3-Tj-78d"/>
-        <segue reference="Svn-oN-68m"/>
+        <segue reference="wNq-Lq-NdE"/>
+        <segue reference="UhJ-x1-isg"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -31,4 +31,10 @@ class NuevoUsuario: NSViewController {
         // Do view setup here.
     }
     
+    @IBAction func AgregarUsuario(_ sender: Any) {
+        // Falta agregar las validaciones para crear el usuario
+        login.Usuarios.append(PersonModel(tName.stringValue, tName.stringValue, tApellidoP.stringValue, tApellidoM.stringValue, "Sexo", tCorreo.stringValue, tPassword1.stringValue, cbRol.stringValue))
+    }
+    
+    
 }
