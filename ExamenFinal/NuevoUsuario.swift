@@ -36,5 +36,24 @@ class NuevoUsuario: NSViewController {
         login.Usuarios.append(PersonModel(tName.stringValue, tName.stringValue, tApellidoP.stringValue, tApellidoM.stringValue, "Sexo", tCorreo.stringValue, tPassword1.stringValue, cbRol.stringValue))
     }
     
+    @IBAction func AgregarUsuario(_ sender: Any) {
+            // Falta agregar las validaciones para crear el usuario
+            let ID = GenerarID(nombre: tName.stringValue, apellidoP: tApellidoP.stringValue, apellidoM: tApellidoM.stringValue, rol: cbRol.stringValue)
+            login.Usuarios.append(PersonModel(ID, tName.stringValue, tApellidoP.stringValue, tApellidoM.stringValue, "Sexo", tCorreo.stringValue, tPassword1.stringValue, cbRol.stringValue))
+            print(ID)
+        }
+        
+        func GenerarID(nombre: String, apellidoP: String, apellidoM:String, rol:String) -> String {
+            let name = nombre[nombre.startIndex]
+            let lastName = apellidoP[apellidoP.startIndex]
+            let lasNameM = apellidoM[apellidoM.startIndex]
+            var roll = rol[rol.startIndex]
+            if rol == "Almacenista" {
+                roll = "a"
+            }
+            let nID = String(format: "%03d", login.Usuarios.count + 1)
+            let nuevoID = "\(name)" + "\(lastName)" + "\(lasNameM)" + "\(nID)" + "\(roll)"
+            return nuevoID
+        }
     
 }
