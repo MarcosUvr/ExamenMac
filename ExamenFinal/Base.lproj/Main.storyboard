@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="XfG-lQ-9wD">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -721,9 +721,9 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uLY-XM-eCt">
-                                <rect key="frame" x="120" y="177" width="98" height="32"/>
+                                <rect key="frame" x="92" y="177" width="154" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Productos" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Oh5-7v-laH">
+                                <buttonCell key="cell" type="push" title="Consulta Productos" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Oh5-7v-laH">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -732,9 +732,9 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vp4-EA-4fY">
-                                <rect key="frame" x="104" y="145" width="130" height="32"/>
+                                <rect key="frame" x="100" y="145" width="138" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Alta Existencias" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hwp-ce-x0D">
+                                <buttonCell key="cell" type="push" title="Nueva Existencia" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hwp-ce-x0D">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -743,9 +743,9 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dma-fX-YkD">
-                                <rect key="frame" x="109" y="113" width="120" height="32"/>
+                                <rect key="frame" x="89" y="113" width="160" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Consulta altas" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HNK-zy-qla">
+                                <buttonCell key="cell" type="push" title="Consulta Existencias" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HNK-zy-qla">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -777,11 +777,15 @@
                     </view>
                     <connections>
                         <segue destination="lbl-B5-DCP" kind="modal" identifier="nuevoProductoSegue" id="AJ8-Mr-0PF"/>
+                        <segue destination="xzE-HY-GXT" kind="modal" identifier="indicadoresAlmacenistaSegue" id="GEn-Ma-Xer"/>
+                        <segue destination="v1D-an-2lQ" kind="modal" identifier="consultaProductosSegue" id="qaG-gz-O0v"/>
+                        <segue destination="jZ0-YE-dbd" kind="modal" identifier="consultaExistenciaSegue" id="RUt-ZK-lBz"/>
+                        <segue destination="0HN-Ip-9is" kind="modal" identifier="nuevaExistenciaSegue" id="H3u-9M-Neg"/>
                     </connections>
                 </viewController>
                 <customObject id="ncD-kK-wOq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-214" y="1114"/>
+            <point key="canvasLocation" x="-240" y="1097"/>
         </scene>
         <!--Indicadores Admin-->
         <scene sceneID="OSS-XQ-uui">
@@ -962,7 +966,7 @@
                 </viewController>
                 <customObject id="S9a-cd-Ljh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="260" y="1022"/>
+            <point key="canvasLocation" x="208" y="1029"/>
         </scene>
         <!--Menú Añadir Usuario-->
         <scene sceneID="wLh-D8-Jf4">
@@ -1014,7 +1018,7 @@
                 </viewController>
                 <customObject id="Cun-oJ-Ldu" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="688" y="1029"/>
+            <point key="canvasLocation" x="676" y="1023"/>
         </scene>
         <!--Nuevo Usuario-->
         <scene sceneID="JaB-pi-RpP">
@@ -1253,6 +1257,30 @@
             </objects>
             <point key="canvasLocation" x="895" y="1482"/>
         </scene>
+        <!--ConsultaVentas-->
+        <scene sceneID="DNt-EJ-gXs">
+            <objects>
+                <viewController title="ConsultaVentas" id="rFm-PN-xpY" customClass="ConsultaVentas" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Q1l-dj-229">
+                        <rect key="frame" x="0.0" y="0.0" width="357" height="168"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IKq-9X-GDO">
+                                <rect key="frame" x="127" y="132" width="103" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Consulta Ventas" id="rzg-nL-cvu">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="wnI-42-ZEp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="244"/>
+        </scene>
         <!--Nueva Venta-->
         <scene sceneID="ttk-aN-DBw">
             <objects>
@@ -1447,9 +1475,9 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gue-l3-f5h">
-                                <rect key="frame" x="88" y="93" width="88" height="32"/>
+                                <rect key="frame" x="65" y="93" width="134" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Consulta" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ElB-tm-tDx">
+                                <buttonCell key="cell" type="push" title="Consulta Ventas" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ElB-tm-tDx">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -1484,11 +1512,13 @@
                         <outlet property="btnIndicadores" destination="fPB-fR-Ji6" id="rAs-5J-Nbj"/>
                         <outlet property="btnNuevaVenta" destination="ssT-3J-mFO" id="LX4-As-qVP"/>
                         <segue destination="D8k-K4-W90" kind="modal" identifier="nuevaVentaSegue" id="jGU-o7-y3K"/>
+                        <segue destination="7KM-t4-dEd" kind="modal" identifier="indicadoresVendedorSegue" id="OSn-zc-HN8"/>
+                        <segue destination="rFm-PN-xpY" kind="modal" identifier="consultaVentasSegue" id="NNw-rk-bQS"/>
                     </connections>
                 </viewController>
                 <customObject id="Qtf-Ho-qaL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="513" y="655.5"/>
+            <point key="canvasLocation" x="459" y="668"/>
         </scene>
         <!--Nuevo Producto-->
         <scene sceneID="kB9-zz-bev">
@@ -1662,7 +1692,127 @@
                 </viewController>
                 <customObject id="iRh-3s-r5S" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-657" y="1178"/>
+            <point key="canvasLocation" x="-755" y="951"/>
+        </scene>
+        <!--Consulta Existencias-->
+        <scene sceneID="VRZ-sa-qgQ">
+            <objects>
+                <viewController title="Consulta Existencias" id="jZ0-YE-dbd" customClass="ConsultaExistencias" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="gaK-tW-OYR">
+                        <rect key="frame" x="0.0" y="0.0" width="218" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RhJ-on-Fb2">
+                                <rect key="frame" x="45" y="264" width="129" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Consulta Existencias" id="oax-yD-MMU">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="yOT-vL-hVh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-803" y="1732"/>
+        </scene>
+        <!--Nueva Existencia-->
+        <scene sceneID="XAj-67-fUp">
+            <objects>
+                <viewController title="Nueva Existencia" id="0HN-Ip-9is" customClass="NuevaExistencia" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="NkH-hy-05I">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w9g-KQ-TiE">
+                                <rect key="frame" x="172" y="264" width="107" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Nueva Existencia" id="ovu-bd-jec">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="Qdi-eT-Y0p" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-449" y="1785"/>
+        </scene>
+        <!--Indicadores Almacenista-->
+        <scene sceneID="guC-71-3O6">
+            <objects>
+                <viewController title="Indicadores Almacenista" id="xzE-HY-GXT" customClass="IndicadoresAlmacenista" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="z7z-i0-XIi">
+                        <rect key="frame" x="0.0" y="0.0" width="297" height="102"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dgT-s1-Akc">
+                                <rect key="frame" x="73" y="66" width="151" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Indicadores almacenista" id="Mf8-A8-WOv">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="wg4-xZ-pY9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-80" y="1530"/>
+        </scene>
+        <!--Indicadores Vendedor-->
+        <scene sceneID="9eP-3l-JAJ">
+            <objects>
+                <viewController title="Indicadores Vendedor" id="7KM-t4-dEd" customClass="IndicadoresVendedor" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="7dX-L8-rCp">
+                        <rect key="frame" x="0.0" y="0.0" width="302" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mdt-ke-Cnd">
+                                <rect key="frame" x="93" y="264" width="137" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Indicadores Vendedor" id="h9t-0L-j1u">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="8bl-uV-bob" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="282"/>
+        </scene>
+        <!--Consulta Productos-->
+        <scene sceneID="ZVg-LZ-9vY">
+            <objects>
+                <viewController title="Consulta Productos" id="v1D-an-2lQ" customClass="ConsultaProducto" customModule="ExamenFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="8k9-5w-TRR">
+                        <rect key="frame" x="0.0" y="0.0" width="310" height="148"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MeJ-ZO-pho">
+                                <rect key="frame" x="93" y="112" width="124" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Consulta Productos" id="rJ4-zF-N0e">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="LBt-cm-9DN" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-890" y="1399"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
