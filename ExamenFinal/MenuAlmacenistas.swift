@@ -42,7 +42,7 @@ class MenuAlmacenistas: NSViewController {
             (segue.destinationController as! ConsultaProducto).login = login
         } else if segue.identifier == "nuevaExistenciaSegue" {
             (segue.destinationController as! NuevaExistencia).login = login
-        } else if segue.identifier == "consultaExistencizSegue" {
+        } else if segue.identifier == "consultaExistenciaSegue" {
             (segue.destinationController as! ConsultaExistencias).login = login
         } else if segue.identifier == "indicadoresAlmacenistaSegue" {
             (segue.destinationController as! IndicadoresAlmacenista).login = login

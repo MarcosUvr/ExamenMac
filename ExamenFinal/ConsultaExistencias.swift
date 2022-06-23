@@ -11,12 +11,12 @@ class ConsultaExistencias: NSViewController {
 
     // Variables del código
     @objc dynamic var login:ViewController!
-    @objc dynamic var Existencia: [ExistenciaModel] = []
+    @objc dynamic var Stock: [ExistenciaModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        //Existencia = login.Existencias
+        Stock = login.Existencias
         print("\(login.Existencias.count)")
     }
     

@@ -11,10 +11,12 @@ class ConsultaProducto: NSViewController {
 
     // Variables del código
     @objc dynamic var login:ViewController!
+    @objc dynamic var Products: [ProductModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        Products = login.Productos
     }
     
 }

@@ -24,6 +24,7 @@ class NuevoUsuario: NSViewController {
     
     // Variables locales
     @objc dynamic var login:ViewController!
+    var AlertBox = NSAlert()
 
     
     override func viewDidLoad() {
@@ -34,37 +35,54 @@ class NuevoUsuario: NSViewController {
     
     
     @IBAction func AgregarUsuario(_ sender: Any) {
-            // Falta agregar las validaciones para crear el usuario
-      //  if Validaciones() {
-            
-        //} else {
-            
-        //}
-            let ID = GenerarID(nombre: tName.stringValue, apellidoP: tApellidoP.stringValue, apellidoM: tApellidoM.stringValue, rol: cbRol.stringValue)
-        login.Usuarios.append(PersonModel(ID, tName.stringValue, tApellidoP.stringValue, tApellidoM.stringValue, "Sexo", tCorreo.stringValue, tPassword1.stringValue, cbRol.stringValue, tTelefono.stringValue, false))
-            print(ID)
+        if Validaciones() {
+                    let ID = GenerarID(nombre: tName.stringValue, apellidoP: tApellidoP.stringValue, apellidoM: tApellidoM.stringValue, rol: cbRol.stringValue)
+                login.Usuarios.append(PersonModel(ID, tName.stringValue, tApellidoP.stringValue, tApellidoM.stringValue, "Sexo", tCorreo.stringValue, tPassword1.stringValue, cbRol.stringValue, tTelefono.stringValue, false, 0))
+                    print(ID)
+                    
+                    AlertBox.messageText = "Se agrego el usuario exitosamente"
+                    AlertBox.runModal()
         }
+    }
         
-        func GenerarID(nombre: String, apellidoP: String, apellidoM:String, rol:String) -> String {
-            let name = nombre[nombre.startIndex]
-            let lastName = apellidoP[apellidoP.startIndex]
-            let lasNameM = apellidoM[apellidoM.startIndex]
-            var roll = rol[rol.startIndex]
-            if rol == "Almacenista" {
-                roll = "a"
-            }
-            let nID = String(format: "%03d", login.Usuarios.count + 1)
-            let nuevoID = "\(name)" + "\(lastName)" + "\(lasNameM)" + "\(nID)" + "\(roll)"
-            return nuevoID
+    func GenerarID(nombre: String, apellidoP: String, apellidoM:String, rol:String) -> String {
+        let name = nombre[nombre.startIndex]
+        let lastName = apellidoP[apellidoP.startIndex]
+        let lasNameM = apellidoM[apellidoM.startIndex]
+        var roll = rol[rol.startIndex]
+        if rol == "Almacenista" {
+            roll = "a"
         }
+        let nID = String(format: "%03d", login.Usuarios.count + 1)
+        let nuevoID = "\(name)" + "\(lastName)" + "\(lasNameM)" + "\(nID)" + "\(roll)"
+        return nuevoID
+    }
     
-   /* func Validaciones(str:String?, num:Double?) -> Bool {
-        var letras = CharacterSet.letters
-        var numeros = CharacterSet.decimalDigits
-        if !CharacterSet(charactersIn: tName.stringValue).isSubset(of: numeros) {
+    func Validaciones() -> Bool {
+            let letras = CharacterSet.letters
+            let numeros = CharacterSet.decimalDigits
             
-        }
-        return true
-    }*/
+            if (tName.stringValue == "" || tApellidoP.stringValue == "" || tApellidoM.stringValue == "" || tCorreo.stringValue == "" || tPassword1.stringValue == "" || tPassword2.stringValue == "" || tTelefono.stringValue == "" || cbRol.stringValue == "" ){
+                
+                AlertBox.messageText = "No puede haber campos vacios"
+                AlertBox.runModal()
+                return false
+            }
+            
+            if !CharacterSet(charactersIn: tName.stringValue).isSubset(of: letras) || !CharacterSet(charactersIn: tApellidoP.stringValue).isSubset(of: letras) || !CharacterSet(charactersIn: tApellidoM.stringValue).isSubset(of: letras) || !CharacterSet(charactersIn: tTelefono.stringValue).isSubset(of: numeros){
+                
+                AlertBox.messageText = "Datos invalidos"
+                AlertBox.runModal()
+                return false
+            }
+            
+            if tPassword1.stringValue != tPassword2.stringValue{
+                AlertBox.messageText = "Las contraseñas no son iguales"
+                AlertBox.runModal()
+                return false
+            }
+            return true
+            
+            }
     
 }

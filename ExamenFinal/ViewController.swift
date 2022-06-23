@@ -18,8 +18,8 @@ class ViewController: NSViewController {
     var email: String = ""
     var userFound: Bool = false
     var password: String = ""
-    var Usuarios: [PersonModel] = [PersonModel("A001MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "hotmail.com", "swagmen123", "Admin", "21645616", false), PersonModel("A002MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "ahotmail.com", "swagmen123", "Almacenista", "21645616", false), PersonModel("A003MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "bhotmail.com", "swagmen1234", "Vendedor", "21645616", false)]
-    var Ventas: [VentaModel] = [VentaModel("VA001", "VR001")]
+    var Usuarios: [PersonModel] = [PersonModel("A001MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "hotmail.com", "swagmen123", "Admin", "21645616", false, 0), PersonModel("A002MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "ahotmail.com", "swagmen123", "Almacenista", "21645616", false, 0), PersonModel("A003MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "bhotmail.com", "swagmen1234", "Vendedor", "21645616", false, 0)]
+    var Ventas: [VentaModel] = [VentaModel("adsf", "fadsf", "fadsf", "fdasf", 5, 4.5, 7)]
     var Productos: [ProductModel] = [ProductModel("P001", "Mario Kart", "Fácil para humillar a Marcos con la antenita prendida", 68, 70)]
     var Existencias: [ExistenciaModel] = [ExistenciaModel("E001", "Call of Duty Modern Warfare", "Shooter en primera persona", 64)]
     var AlertBox = NSAlert()
@@ -40,30 +40,28 @@ class ViewController: NSViewController {
         email = tEmail.stringValue
         password = tPassword.stringValue
         
-        // Validamos que los datos ingresados sean del tipo que esperamos que sean
-        
-        
-        // Validamos que las credenciales introducidas coincidan con las credenciales guardadas
-        for user in Usuarios {
-            if email == user.Correo && password == user.Password || email == user.ID && password == user.Password {
-                // El ingreso ha sido correcto
-                AlertBox.messageText = "Bienvenido \(user.Nombre)\nRol: \(user.Rol)"
-                AlertBox.runModal()
-                if user.Rol == "Admin" {
-                    // Nos manda al menú de admin
-                    //AlertBox.messageText = "Entramos al menú de admin"
-                    performSegue(withIdentifier: "menuAdminSegue", sender: self)
-                } else if user.Rol == "Almacenista" {
-                    // Nos manda al menú de almacenista
-                    AlertBox.messageText = "Entramos al menú de Almacenista"
-                    performSegue(withIdentifier: "menuAlmacenistaSegue", sender: self)
-                } else if user.Rol == "Vendedor" {
-                    // Nos manda al menú de vendedor
-                    AlertBox.messageText = "Entramos al menú de Vendedor"
-                    performSegue(withIdentifier: "menuVentasSegue", sender: self)
+        if Validaciones() {
+            for user in Usuarios {
+                if email == user.Correo && password == user.Password || email == user.ID && password == user.Password {
+                    // El ingreso ha sido correcto
+                    AlertBox.messageText = "Bienvenido \(user.Nombre)\nRol: \(user.Rol)"
+                    AlertBox.runModal()
+                    if user.Rol == "Admin" {
+                        // Nos manda al menú de admin
+                        //AlertBox.messageText = "Entramos al menú de admin"
+                        performSegue(withIdentifier: "menuAdminSegue", sender: self)
+                    } else if user.Rol == "Almacenista" {
+                        // Nos manda al menú de almacenista
+                        AlertBox.messageText = "Entramos al menú de Almacenista"
+                        performSegue(withIdentifier: "menuAlmacenistaSegue", sender: self)
+                    } else if user.Rol == "Vendedor" {
+                        // Nos manda al menú de vendedor
+                        AlertBox.messageText = "Entramos al menú de Vendedor"
+                        performSegue(withIdentifier: "menuVentasSegue", sender: self)
+                    }
+                    
+                    userFound = true
                 }
-                
-                userFound = true
             }
         }
         // No ha encontrado el usuario en los registros
@@ -84,6 +82,16 @@ class ViewController: NSViewController {
             (segue.destinationController as! MenuVentas).login = self
         }
     }
+    
+    func Validaciones () -> Bool {
+            if (tEmail.stringValue == "" || tPassword.stringValue == "" )
+            {
+                AlertBox.messageText = "No puede dejar campos vacios"
+                AlertBox.runModal()
+                return false
+            }
+            return true
+        }
     
 }
 

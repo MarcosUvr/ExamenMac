@@ -10,15 +10,23 @@ import Cocoa
 class ConsultaUsuario: NSViewController {
 
     // Variables de la interfaz
+    @IBOutlet weak var cbID: NSComboBox!
+    @IBOutlet weak var btnModificar: NSButton!
+    @IBOutlet weak var btnEliminar: NSButton!
+    
     
     // Varibles del código
     @objc dynamic var login:ViewController!
-    @objc dynamic var Users : [PersonModel] = [PersonModel("A001MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "hotmail.com", "swagmen123", "Admin", "21645616", false), PersonModel("A002MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "ahotmail.com", "swagmen123", "Almacenista", "21645616", false), PersonModel("A003MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "bhotmail.com", "swagmen1234", "Vendedor", "21645616", false)]
+    @objc dynamic var Users : [PersonModel] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here
-//        Users = login.Usuarios
+        Users = login.Usuarios
+        for x in Users {
+            cbID.addItem(withObjectValue: x.ID)
+        }
         print("numero de usuario \(login.Usuarios.count)")
 
     }
