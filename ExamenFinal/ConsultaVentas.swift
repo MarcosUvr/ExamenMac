@@ -12,10 +12,10 @@ class ConsultaVentas: NSViewController {
     // Variables del código
     @objc dynamic var login:ViewController!
     @objc dynamic var Sales: [VentaModel] = []
-    
     @IBOutlet weak var btnModificar: NSButton!
     @IBOutlet weak var btnEliminar: NSButton!
     @IBOutlet weak var cbID: NSComboBox!
+    var index: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,11 @@ class ConsultaVentas: NSViewController {
     }
     
     @IBAction func EliminarVenta(_ sender: Any) {
-        login
+        //if Sales.contains(where: {$0.IDVenta == //cbID.stringValue }) {
+            let Index = Sales.map({$0.IDVenta})
+            index = Index.firstIndex(of: cbID.stringValue)
+            login.Ventas.remove(at: index)
+        //}
     }
     
     @IBAction func ModificarVenta(_ sender: Any) {

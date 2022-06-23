@@ -46,6 +46,8 @@ class MenuAdmin: NSViewController {
             (segue.destinationController as! MenuAlmacenistas).login = login
         } else if segue.identifier == "indicadoresAdminSegue" {
             (segue.destinationController as! IndicadoresAdmin).login = login
-        }    }
+        }
+        
+    }
     
 }

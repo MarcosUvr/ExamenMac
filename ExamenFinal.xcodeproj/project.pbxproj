@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		991A4D8F2860147700E98B95 /* ConsultaUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A4D8E2860147700E98B95 /* ConsultaUsuario.swift */; };
 		991A4D912860155300E98B95 /* IndicadoresAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A4D902860155300E98B95 /* IndicadoresAdmin.swift */; };
+		991A4D932864746A00E98B95 /* ModificarUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A4D922864746A00E98B95 /* ModificarUsuario.swift */; };
 		EB515819285BEF8700F8CA3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB515818285BEF8700F8CA3C /* AppDelegate.swift */; };
 		EB51581B285BEF8700F8CA3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51581A285BEF8700F8CA3C /* ViewController.swift */; };
 		EB51581D285BEF8900F8CA3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB51581C285BEF8900F8CA3C /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		991A4D8E2860147700E98B95 /* ConsultaUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultaUsuario.swift; sourceTree = "<group>"; };
 		991A4D902860155300E98B95 /* IndicadoresAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicadoresAdmin.swift; sourceTree = "<group>"; };
+		991A4D922864746A00E98B95 /* ModificarUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModificarUsuario.swift; sourceTree = "<group>"; };
 		EB515815285BEF8700F8CA3C /* ExamenFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamenFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB515818285BEF8700F8CA3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB51581A285BEF8700F8CA3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				EB51581A285BEF8700F8CA3C /* ViewController.swift */,
 				EB51581C285BEF8900F8CA3C /* Assets.xcassets */,
 				EB51581E285BEF8900F8CA3C /* Main.storyboard */,
+				991A4D922864746A00E98B95 /* ModificarUsuario.swift */,
 				EBAD2B8F28637ABA00306069 /* ConsultaProducto.swift */,
 				EBAD2B9128637AC800306069 /* ConsultaExistencias.swift */,
 				EBEAA581285C0259006468AE /* MenuAddUsuario.swift */,
@@ -205,6 +208,7 @@
 				EBAD2B9428637BAE00306069 /* NuevaExistencia.swift in Sources */,
 				EB515836285BFD7400F8CA3C /* PersonModel.swift in Sources */,
 				EB515819285BEF8700F8CA3C /* AppDelegate.swift in Sources */,
+				991A4D932864746A00E98B95 /* ModificarUsuario.swift in Sources */,
 				991A4D912860155300E98B95 /* IndicadoresAdmin.swift in Sources */,
 				EB51582C285BF28B00F8CA3C /* MenuAlmacenistas.swift in Sources */,
 				EB515838285BFE6300F8CA3C /* ProductModel.swift in Sources */,

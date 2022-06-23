@@ -1,15 +1,15 @@
 //
-//  NuevoUsuario.swift
+//  ModificarUsuario.swift
 //  ExamenFinal
 //
-//  Created by ISSC_411_2022 on 16/06/22.
+//  Created by Marcos Valdez on 23/06/22.
 //
 
 import Cocoa
 
-class NuevoUsuario: NSViewController {
+class ModificarUsuario: NSViewController {
 
-    // Declaramos nuestras variables de la interfaz(t = textBox, cb = ComboBox, btn = Botón)
+    // Variables del código
     @IBOutlet weak var tName: NSTextField!
     @IBOutlet weak var tApellidoP: NSTextField!
     @IBOutlet weak var tApellidoM: NSTextField!
@@ -18,42 +18,41 @@ class NuevoUsuario: NSViewController {
     @IBOutlet weak var tPassword2: NSTextField!
     @IBOutlet weak var tTelefono: NSTextField!
     @IBOutlet weak var cbRol: NSComboBox!
+    @IBOutlet weak var cbSexo: NSComboBox!
     @IBOutlet weak var btnAgregar: NSButton!
     
-    // Variables locales
     @objc dynamic var login:ViewController!
+    @objc dynamic var Users:[PersonModel] = []
     var AlertBox = NSAlert()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        //tName.stringValue =
+        Users = login.Usuarios
     }
     
-    
-    
-    @IBAction func AgregarUsuario(_ sender: Any) {
+    @IBAction func ModificarUsuario(_ sender: Any) {
         if Validaciones() {
-                    let ID = GenerarID(nombre: tName.stringValue, apellidoP: tApellidoP.stringValue, apellidoM: tApellidoM.stringValue, rol: cbRol.stringValue)
-                login.Usuarios.append(PersonModel(ID, tName.stringValue, tApellidoP.stringValue, tApellidoM.stringValue, "Sexo", tCorreo.stringValue, tPassword1.stringValue, cbRol.stringValue, tTelefono.stringValue, false, 0))
-                    print(ID)
-                    
-                    AlertBox.messageText = "Se agrego el usuario exitosamente"
-                    AlertBox.runModal()
+            //login.Usuarios[login.posicion] = (PersonModel(login.ID[login.posicion], tName.stringValue, tApellidoP.stringValue, tApellidoM.stringValue, cbSexo.stringValue, tCorreo.stringValue, tPassword1.stringValue, cbRol.stringValue, tTelefono.stringValue, false, login.Usuarios.Aportacion[login.posicion]))
+            
+            //Users[login.posicion] = (PersonModel(Users.ID[login.posicion], tName.stringValue, tApellidoP.stringValue, tApellidoP.stringValue, cbSexo.stringValue, tCorreo.stringValue, tPassword1.stringValue, cbRol.stringValue, tTelefono.stringValue, false, Int(Users[login.posicion])))
         }
-    }
         
-    func GenerarID(nombre: String, apellidoP: String, apellidoM:String, rol:String) -> String {
-        let name = nombre[nombre.startIndex]
-        let lastName = apellidoP[apellidoP.startIndex]
-        let lasNameM = apellidoM[apellidoM.startIndex]
-        var roll = rol[rol.startIndex]
-        if rol == "Almacenista" {
-            roll = "a"
+        
+        
+    }
+    
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if segue.identifier == "menuUsuarioSegue" {
+            (segue.destinationController as! MenuAddUsuario).login = login
+        } else if segue.identifier == "menuVentasSegue" {
+            (segue.destinationController as! MenuVentas).login = login
+        } else if segue.identifier == "menuAlmacenistaSegue" {
+            (segue.destinationController as! MenuAlmacenistas).login = login
+        } else if segue.identifier == "indicadoresAdminSegue" {
+            (segue.destinationController as! IndicadoresAdmin).login = login
         }
-        let nID = String(format: "%03d", login.Usuarios.count + 1)
-        let nuevoID = "\(name)" + "\(lastName)" + "\(lasNameM)" + "\(nID)" + "\(roll)"
-        return nuevoID
     }
     
     func Validaciones() -> Bool {
@@ -79,7 +78,7 @@ class NuevoUsuario: NSViewController {
             AlertBox.runModal()
             return false
         }
-        return true            
+        return true
     }
     
 }

@@ -23,6 +23,7 @@ class ViewController: NSViewController {
     var Productos: [ProductModel] = [ProductModel("P001", "Mario Kart", "Fácil para humillar a Marcos con la antenita prendida", 68, 70)]
     var Existencias: [ExistenciaModel] = [ExistenciaModel("E001", "Call of Duty Modern Warfare", "Shooter en primera persona", 64)]
     var AlertBox = NSAlert()
+    var posicion: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
