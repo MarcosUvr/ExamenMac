@@ -18,6 +18,7 @@ class MenuAlmacenistas: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        print("\(login.Existencias.count)")
     }
     
     @IBAction func Navegacion(_ sender: NSButton) {

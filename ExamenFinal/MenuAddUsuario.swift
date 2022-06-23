@@ -19,6 +19,7 @@ class MenuAddUsuario: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        print("\(login.Usuarios.count)")
     }
     
     @IBAction func Navegacion(_ sender: NSButton) {

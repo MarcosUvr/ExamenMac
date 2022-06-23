@@ -17,9 +17,10 @@ class PersonModel: NSObject {
     @objc dynamic var Password: String
     @objc dynamic var Rol: String
     @objc dynamic var Telefono: String
+    @objc dynamic var Logged: Bool
     // Este es un comentario
     
-    init (_ ID: String, _ Nombre: String, _ ApellidoP: String, _ ApellidoM: String, _ Sexo: String, _ Correo: String, _ Password: String, _ Rol: String, _ Telefono: String) {
+    init (_ ID: String, _ Nombre: String, _ ApellidoP: String, _ ApellidoM: String, _ Sexo: String, _ Correo: String, _ Password: String, _ Rol: String, _ Telefono: String, _ Logged: Bool) {
         self.ID = ID
         self.Nombre = Nombre
         self.ApellidoP = ApellidoP
@@ -29,5 +30,6 @@ class PersonModel: NSObject {
         self.Password = Password
         self.Rol = Rol
         self.Telefono = Telefono
+        self.Logged = Logged
     }
 }
