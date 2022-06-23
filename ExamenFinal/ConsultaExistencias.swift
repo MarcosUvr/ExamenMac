@@ -17,7 +17,6 @@ class ConsultaExistencias: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
         Stock = login.Existencias
-        print("\(login.Existencias.count)")
     }
     
 }

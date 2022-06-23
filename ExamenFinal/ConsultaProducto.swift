@@ -27,6 +27,15 @@ class ConsultaProducto: NSViewController {
         for x in Products {
             cbID.addItem(withObjectValue: x.ID)
         }
+        btnModificar.isEnabled = false
+        btnEliminar.isEnabled = false
+    }
+    
+    @IBAction func CambioCbID(_ sender: Any) {
+        if cbID.stringValue != nil {
+            btnEliminar.isEnabled = true
+            btnModificar.isEnabled = true
+        }
     }
     
     @IBAction func ModificarProductos(_ sender: Any) {

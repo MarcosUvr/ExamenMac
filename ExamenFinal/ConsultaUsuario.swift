@@ -31,8 +31,17 @@ class ConsultaUsuario: NSViewController {
         for x in Users {
             cbID.addItem(withObjectValue: x.ID)
         }
+        btnModificar.isEnabled = false
+        btnEliminar.isEnabled = false
         print("numero de usuario \(login.Usuarios.count)")
 
+    }
+    
+    @IBAction func CambioCbID(_ sender: Any) {
+        if cbID.stringValue != nil {
+            btnEliminar.isEnabled = true
+            btnModificar.isEnabled = true
+        }
     }
     
     @IBAction func ModificarUsuario(_ sender: Any) {
@@ -47,7 +56,7 @@ class ConsultaUsuario: NSViewController {
     
     @IBAction func EliminarUsuario(_ sender: Any) {
         if Users.contains(where: {$0.ID == cbID.stringValue }) {
-            var Index = Users.map({$0.ID})
+            let Index = Users.map({$0.ID})
             
             index = Index.firstIndex(of: cbID.stringValue)
             index2 = index
