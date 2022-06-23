@@ -18,7 +18,11 @@ class ViewController: NSViewController {
     var email: String = ""
     var userFound: Bool = false
     var password: String = ""
-    var Usuarios: [PersonModel] = [PersonModel("A001MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "hotmail.com", "swagmen123", "Admin", "21645616", false, 0), PersonModel("A002MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "ahotmail.com", "swagmen123", "Almacenista", "21645616", false, 0), PersonModel("A003MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "bhotmail.com", "swagmen1234", "Vendedor", "21645616", false, 0)]
+    var Usuarios: [PersonModel] =
+    [PersonModel("A001MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "hotmail.com", "swagmen123", "Admin", "21645616", false, 0),
+     PersonModel("A002MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "ahotmail.com", "swagmen123", "Almacenista", "21645616", false, 0),
+     PersonModel("A002MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "ahotmail.com", "swagmen123", "Vendedor", "21645616", false, 0),
+     PersonModel("A004MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "chotmail.com", "swagmen1234", "Cliente", "21645616", false, 0)]
     var Ventas: [VentaModel] = [VentaModel("adsf", "fadsf", "fadsf", "fdasf", 5, 4.5, 7)]
     var Productos: [ProductModel] = [ProductModel("P001", "Mario Kart", "Fácil para humillar a Marcos con la antenita prendida", 68, 70)]
     var Existencias: [ExistenciaModel] = [ExistenciaModel("E001", "Call of Duty Modern Warfare", "Shooter en primera persona", 64)]
