@@ -28,6 +28,7 @@
 		EBAD2B9228637AC800306069 /* ConsultaExistencias.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAD2B9128637AC800306069 /* ConsultaExistencias.swift */; };
 		EBAD2B9428637BAE00306069 /* NuevaExistencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAD2B9328637BAE00306069 /* NuevaExistencia.swift */; };
 		EBAD2B9628637F2200306069 /* ConsultaVentas.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAD2B9528637F2200306069 /* ConsultaVentas.swift */; };
+		EBAD2B9A28639F0C00306069 /* ExistenciaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAD2B9928639F0C00306069 /* ExistenciaModel.swift */; };
 		EBEAA582285C0259006468AE /* MenuAddUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEAA581285C0259006468AE /* MenuAddUsuario.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		EBAD2B9128637AC800306069 /* ConsultaExistencias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultaExistencias.swift; sourceTree = "<group>"; };
 		EBAD2B9328637BAE00306069 /* NuevaExistencia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevaExistencia.swift; sourceTree = "<group>"; };
 		EBAD2B9528637F2200306069 /* ConsultaVentas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultaVentas.swift; sourceTree = "<group>"; };
+		EBAD2B9928639F0C00306069 /* ExistenciaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistenciaModel.swift; sourceTree = "<group>"; };
 		EBEAA581285C0259006468AE /* MenuAddUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAddUsuario.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 				EB515835285BFD7400F8CA3C /* PersonModel.swift */,
 				EB515837285BFE6300F8CA3C /* ProductModel.swift */,
 				EB51583B285BFECE00F8CA3C /* VentaModel.swift */,
+				EBAD2B9928639F0C00306069 /* ExistenciaModel.swift */,
 				EB51582D285BF85C00F8CA3C /* NuevoUsuario.swift */,
 				EB51582F285BF86B00F8CA3C /* NuevaVenta.swift */,
 				EB515831285BF87900F8CA3C /* NuevoProducto.swift */,
@@ -198,6 +201,7 @@
 				EBAD2B9028637ABA00306069 /* ConsultaProducto.swift in Sources */,
 				EB515828285BF26B00F8CA3C /* MenuAdmin.swift in Sources */,
 				EBAD2B8C2863795200306069 /* IndicadoresAlmacenista.swift in Sources */,
+				EBAD2B9A28639F0C00306069 /* ExistenciaModel.swift in Sources */,
 				EBAD2B9428637BAE00306069 /* NuevaExistencia.swift in Sources */,
 				EB515836285BFD7400F8CA3C /* PersonModel.swift in Sources */,
 				EB515819285BEF8700F8CA3C /* AppDelegate.swift in Sources */,

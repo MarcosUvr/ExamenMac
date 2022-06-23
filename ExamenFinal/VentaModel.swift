@@ -8,11 +8,11 @@
 import Foundation
 
 class VentaModel: NSObject {
-    @objc dynamic var ID: String
+    @objc dynamic var IDVenta: String
     @objc dynamic var IDVendedor: String
     
-    init(_ ID: String, _ IDVendedor: String) {
-        self.ID = ID
+    init(_ IDVenta: String, _ IDVendedor: String) {
+        self.IDVenta = IDVenta
         self.IDVendedor = IDVendedor
     }
 }

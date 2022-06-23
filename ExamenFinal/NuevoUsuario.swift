@@ -31,13 +31,15 @@ class NuevoUsuario: NSViewController {
         // Do view setup here.
     }
     
-    @IBAction func AgregarUsuario(_ sender: Any) {
-        // Falta agregar las validaciones para crear el usuario
-        login.Usuarios.append(PersonModel(tName.stringValue, tName.stringValue, tApellidoP.stringValue, tApellidoM.stringValue, "Sexo", tCorreo.stringValue, tPassword1.stringValue, cbRol.stringValue))
-    }
+    
     
     @IBAction func AgregarUsuario(_ sender: Any) {
             // Falta agregar las validaciones para crear el usuario
+      //  if Validaciones() {
+            
+        //} else {
+            
+        //}
             let ID = GenerarID(nombre: tName.stringValue, apellidoP: tApellidoP.stringValue, apellidoM: tApellidoM.stringValue, rol: cbRol.stringValue)
             login.Usuarios.append(PersonModel(ID, tName.stringValue, tApellidoP.stringValue, tApellidoM.stringValue, "Sexo", tCorreo.stringValue, tPassword1.stringValue, cbRol.stringValue))
             print(ID)
@@ -55,5 +57,14 @@ class NuevoUsuario: NSViewController {
             let nuevoID = "\(name)" + "\(lastName)" + "\(lasNameM)" + "\(nID)" + "\(roll)"
             return nuevoID
         }
+    
+   /* func Validaciones(str:String?, num:Double?) -> Bool {
+        var letras = CharacterSet.letters
+        var numeros = CharacterSet.decimalDigits
+        if !CharacterSet(charactersIn: tName.stringValue).isSubset(of: numeros) {
+            
+        }
+        return true
+    }*/
     
 }
