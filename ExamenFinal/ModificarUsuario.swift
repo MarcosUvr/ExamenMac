@@ -23,6 +23,7 @@ class ModificarUsuario: NSViewController {
     
     @objc dynamic var login:ViewController!
     @objc dynamic var Users:[PersonModel] = []
+    var posicion: Int!
     var AlertBox = NSAlert()
     
     override func viewDidLoad() {
@@ -30,29 +31,29 @@ class ModificarUsuario: NSViewController {
         // Do view setup here.
         //tName.stringValue =
         Users = login.Usuarios
+        tName.stringValue = Users[posicion].Nombre
+        tApellidoP.stringValue = Users[posicion].ApellidoP
+        tApellidoM.stringValue = Users[posicion].ApellidoM
+        tCorreo.stringValue = Users[posicion].Correo
+        tTelefono.stringValue = Users[posicion].Nombre
+        tPassword1.stringValue = Users[posicion].Password
+        cbRol.selectItem(withObjectValue: Users[posicion].Rol)
+        cbSexo.selectItem(withObjectValue: Users[posicion].Sexo)
     }
     
     @IBAction func ModificarUsuario(_ sender: Any) {
-        if Validaciones() {
+        //if Validaciones() {
             //login.Usuarios[login.posicion] = (PersonModel(login.ID[login.posicion], tName.stringValue, tApellidoP.stringValue, tApellidoM.stringValue, cbSexo.stringValue, tCorreo.stringValue, tPassword1.stringValue, cbRol.stringValue, tTelefono.stringValue, false, login.Usuarios.Aportacion[login.posicion]))
-            
-            //Users[login.posicion] = (PersonModel(Users.ID[login.posicion], tName.stringValue, tApellidoP.stringValue, tApellidoP.stringValue, cbSexo.stringValue, tCorreo.stringValue, tPassword1.stringValue, cbRol.stringValue, tTelefono.stringValue, false, Int(Users[login.posicion])))
-        }
+        let ID = GenerarID(nombre: tName.stringValue, apellidoP: tApellidoP.stringValue, apellidoM: tApellidoM.stringValue, rol: cbRol.stringValue)
+        login.Usuarios[posicion] = PersonModel(ID, tName.stringValue, tApellidoP.stringValue, tApellidoP.stringValue, cbSexo.stringValue, tCorreo.stringValue, tPassword1.stringValue, cbRol.stringValue, tTelefono.stringValue, false, Int(Users[posicion].Aportacion))
+        AlertBox.messageText = "Se ha modificado el usuario"
+        AlertBox.runModal()
+            dismiss(self)
+        //}
         
         
         
-    }
-    
-    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        if segue.identifier == "menuUsuarioSegue" {
-            (segue.destinationController as! MenuAddUsuario).login = login
-        } else if segue.identifier == "menuVentasSegue" {
-            (segue.destinationController as! MenuVentas).login = login
-        } else if segue.identifier == "menuAlmacenistaSegue" {
-            (segue.destinationController as! MenuAlmacenistas).login = login
-        } else if segue.identifier == "indicadoresAdminSegue" {
-            (segue.destinationController as! IndicadoresAdmin).login = login
-        }
+        
     }
     
     func Validaciones() -> Bool {
@@ -79,6 +80,19 @@ class ModificarUsuario: NSViewController {
             return false
         }
         return true
+    }
+    
+    func GenerarID(nombre: String, apellidoP: String, apellidoM:String, rol:String) -> String {
+        let name = nombre[nombre.startIndex]
+        let lastName = apellidoP[apellidoP.startIndex]
+        let lasNameM = apellidoM[apellidoM.startIndex]
+        var roll = rol[rol.startIndex]
+        if rol == "Almacenista" {
+            roll = "a"
+        }
+        let nID = String(format: "%03d", posicion + 1)
+        let nuevoID = "\(name)" + "\(lastName)" + "\(lasNameM)" + "\(nID)" + "\(roll)"
+        return nuevoID
     }
     
 }

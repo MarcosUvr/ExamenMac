@@ -20,6 +20,8 @@ class ConsultaUsuario: NSViewController {
     @objc dynamic var Users : [PersonModel] = []
     //var Index: Int = 0
     var index: Int!
+    var index2: Int = 0
+    var AlertBox = NSAlert()
     
     
     override func viewDidLoad() {
@@ -39,23 +41,29 @@ class ConsultaUsuario: NSViewController {
             
             index = Index.firstIndex(of: cbID.stringValue)
         }
-        //login.posicion = Index
+        dismiss(self)
+        performSegue(withIdentifier: "modificarUsuarioSegue", sender: login)
     }
     
     @IBAction func EliminarUsuario(_ sender: Any) {
         if Users.contains(where: {$0.ID == cbID.stringValue }) {
-            let Index = Users.map({$0.ID})
+            var Index = Users.map({$0.ID})
             
             index = Index.firstIndex(of: cbID.stringValue)
+            index2 = index
             
-            //login.Ventas.remove(at: index)
-            print("\(index), \(Index)")
+            login.Usuarios.remove(at: index2)
+            
         }
+        AlertBox.messageText = "Registro eliminado"
+        AlertBox.runModal()
+        dismiss(self)
     }
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         if segue.identifier == "modificarUsuarioSegue" {
             (segue.destinationController as! ModificarUsuario).login = login
+            (segue.destinationController as! ModificarUsuario).posicion = index
         }
         
     }
