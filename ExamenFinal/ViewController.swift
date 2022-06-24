@@ -19,13 +19,13 @@ class ViewController: NSViewController {
     var userFound: Bool = false
     var password: String = ""
     var Usuarios: [PersonModel] =
-    [PersonModel("A001MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "hotmail.com", "swagmen123", "Admin", "21645616", false, 0),
-     PersonModel("A002MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "ahotmail.com", "swagmen123", "Almacenista", "21645616", false, 0),
-     PersonModel("A002MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "ahotmail.com", "swagmen123", "Vendedor", "21645616", false, 0),
-     PersonModel("A004MVR", "Marcos", "Valdez", "Rodríguez", "Hombre", "chotmail.com", "swagmen1234", "Cliente", "21645616", false, 0)]
-    var Ventas: [VentaModel] = [VentaModel("adsf", "fadsf", "fadsf", "fdasf", 5, 4.5, 7)]
-    var Productos: [ProductModel] = [ProductModel("P001", "Mario Kart", "Fácil para humillar a Marcos con la antenita prendida", 68, 70)]
-    var Existencias: [ExistenciaModel] = [ExistenciaModel("E001", "Call of Duty Modern Warfare", "Shooter en primera persona", 64)]
+    [PersonModel("MVR001A", "Marcos", "Valdez", "Rodríguez", "Hombre", "hotmail.com", "swagmen123", "Admin", "21645616", false, 0),
+     PersonModel("ESG002a", "Eduardo", "Suaste", "Gonzalez", "Hombre", "ahotmail.com", "swagmen123", "Almacenista", "21645616", false, 1),
+     PersonModel("ELL003V", "Emiliano", "Lopez", "Laguna", "Hombre", "bhotmail.com", "swagmen123", "Vendedor", "21645616", false, 1),
+     PersonModel("DPS004C", "Daniel", "Perez", "Salgado", "Hombre", "chotmail.com", "swagmen1234", "Cliente", "21645616", false, 0)]
+    var Ventas: [VentaModel] = [VentaModel("IDVenta", "ELL003V", "P001", "DPS004C", 1, 70, 70)]
+    var Productos: [ProductModel] = [ProductModel("P001", "Mario Kart", "Fácil para humillar a Marcos con la antenita prendida", 68, 70, 9)]
+    var Existencias: [ExistenciaModel] = [ExistenciaModel("IDExistencia", "E001", "ESG002a", "Call of Duty Modern Warfare", "Shooter en primera persona", 64)]
     var AlertBox = NSAlert()
     var posicion: Int = 0
     

@@ -10,7 +10,9 @@ import Cocoa
 class NuevoProducto: NSViewController {
 
     // Declaramos nuestras variables de la interfaz(t = textBox, cb = ComboBox, btn = Botón)
-    
+    @IBOutlet weak var tName: NSTextField!
+    @IBOutlet weak var tDescription: NSTextField!
+    @IBOutlet weak var tPrecioC: NSTextField!
     
     // Variables locales
     @objc dynamic var login:ViewController!
