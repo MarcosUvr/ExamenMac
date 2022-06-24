@@ -2315,6 +2315,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Agregar:" target="lbl-B5-DCP" id="z7n-8p-HiB"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
@@ -2322,6 +2325,7 @@
                         <outlet property="Name" destination="RGM-nz-YdZ" id="Szt-Vj-GpC"/>
                         <outlet property="tDescription" destination="a0B-Tb-Xi3" id="RiL-Gg-UaZ"/>
                         <outlet property="tPrecioC" destination="YFd-DI-aYr" id="k4b-hT-5OY"/>
+                        <outlet property="tPrecioV" destination="Xxb-2M-88U" id="Qoo-PM-dxk"/>
                     </connections>
                 </viewController>
                 <customObject id="iRh-3s-r5S" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
